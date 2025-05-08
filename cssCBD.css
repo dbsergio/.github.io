@@ -1035,3 +1035,80 @@ input:invalid + .error-message {
   opacity: 0.5;
   cursor: allowed;
 }
+/* Añadir al final del CSS */
+/* Animaciones mejoradas */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.producto-card:hover {
+  animation: pulse 0.5s ease;
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
+}
+
+/* Mejor contraste para accesibilidad */
+a, button {
+  transition: opacity 0.3s ease;
+}
+
+a:hover, button:hover {
+  opacity: 0.9;
+}
+
+/* Optimización para móviles */
+@media (max-width: 480px) {
+  .producto-info {
+      padding: 1rem;
+  }
+  
+  .producto-img {
+      height: 200px;
+  }
+  
+  .section-title {
+      font-size: 1.5rem;
+  }
+  
+  .hero h2 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Mejores transiciones para tarjetas */
+.producto-card, .beneficio-item, .testimonio-card {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Mejor feedback para formularios */
+.form-group {
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+/* Mejor visualización de precios */
+.precio::after {
+  content: "€";
+  margin-left: 2px;
+}
+
+.old-price::before {
+  content: "€";
+  margin-right: 2px;
+}
