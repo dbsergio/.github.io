@@ -1,11 +1,11 @@
 /* Reset CSS y variables */
 :root {
-    --primary-color: #3a7d44;
+    --primary-color: #2a6b34;
     --secondary-color: #6a9f5e;
     --accent-color: #8cb369;
     --dark-color: #1b3a2c;
     --light-color: #f8f9fa;
-    --text-color: #333;
+    --text-color: #222;
     --text-light: #777;
     --white: #ffffff;
     --black: #000000;
@@ -18,6 +18,7 @@
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s ease;
+    --focus-outline: 2px solid var(--accent-color);
   }
   
   * {
@@ -136,7 +137,7 @@
   
   .cta-button {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: white !important;
     box-shadow: var(--box-shadow);
   }
   
@@ -375,7 +376,7 @@
   .btn-comprar {
     width: 100%;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: white !important;
     padding: 12px;
     border: none;
     border-radius: 5px;
@@ -941,3 +942,96 @@
       right: 20px;
     }
   }
+  a:focus, button:focus, input:focus {
+    outline: var(--focus-outline);
+    outline-offset: 3px;
+  }
+  [aria-current="page"] {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  /* Estilos para filtros */
+.filtros-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.filtros-productos {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-filtro {
+  padding: 8px 16px;
+  background: var(--gray-light);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-filtro.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.ordenar-productos select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--gray-medium);
+}
+/* Validación de formulario */
+input:invalid, textarea:invalid, select:invalid {
+  border-color: var(--error-color);
+}
+
+input:valid, textarea:valid, select:valid {
+  border-color: var(--success-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: none;
+}
+
+input:invalid + .error-message {
+  display: block;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 3rem;
+}
+
+.pagina-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--gray-medium);
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.pagina-btn:hover:not(:disabled) {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.pagina-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.pagina-btn:disabled {
+  opacity: 0.5;
+  cursor: allowed;
+}
