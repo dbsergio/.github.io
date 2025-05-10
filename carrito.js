@@ -50,6 +50,7 @@ class Carrito {
         this.setupEventListeners();
         this.checkCartItems();
         this.setupPagination();
+        this.updateProductsDisplay()
     }
 
     updateCartCount() {
