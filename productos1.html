@@ -57,9 +57,26 @@
         <h2 class="section-title">Catálogo <span>Completo</span> NatureCBD</h2>
         <p class="section-subtitle">Productos 100% naturales, certificados y de calidad premium</p>
 
+        <div class="filtros-container">
+          <div class="filtros-productos">
+            <button class="btn-filtro active" data-categoria="todos">Todos</button>
+            <button class="btn-filtro" data-categoria="aceites">Aceites</button>
+            <button class="btn-filtro" data-categoria="comestibles">Comestibles</button>
+            <button class="btn-filtro" data-categoria="cosmetica">Cosmética</button>
+            <button class="btn-filtro" data-categoria="otros">Otros</button>
+          </div>
+          <div class="ordenar-productos">
+            <select id="ordenar" aria-label="Ordenar productos">
+              <option value="popularidad">Más populares</option>
+              <option value="precio-asc">Precio: menor a mayor</option>
+              <option value="precio-desc">Precio: mayor a menor</option>
+              <option value="valoracion">Mejor valorados</option>
+            </select>
+          </div>
+        </div>
         <div class="productos-grid">
           <!-- Producto 1 -->
-          <article class="producto-card">
+          <article class="producto-card" data-categoria="aceites">
             <div class="producto-badge">Nuevo</div>
             <img src="https://imgs.search.brave.com/rC7ZJSg4iUHuvk9HMFIxXFO5qegWzXkvEGiIjCh9ays/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF1aHZpU0hmOUwu/anBn" alt="Aceite CBD 15%" class="producto-img">
             <div class="producto-info">
@@ -72,7 +89,7 @@
           </article>
 
           <!-- Producto 2 -->
-          <article class="producto-card">
+          <article class="producto-card" data-categoria="comestibles">
             <div class="producto-badge">Relajante</div>
             <img src="https://imgs.search.brave.com/LGYaRLFxbAcBoM5aeLMEAPU2LD-CDJI6n5RxesBi8m0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzAy/NTEvMzE3MS8yNTQ2/L2ZpbGVzL09yaWdp/bmFsLUNCRC1HdW1t/eS1CZWFyc19CTV9X/ZWJfNTAweC5wbmc_/dj0xNzA2NzE2MjEy" alt="Gominolas CBD" class="producto-img">
             <div class="producto-info">
@@ -85,7 +102,7 @@
           </article>
 
           <!-- Producto 3 -->
-          <article class="producto-card">
+          <article class="producto-card" data-categoria="cosmetica">
             <div class="producto-badge">Cosmética</div>
             <img src="https://imgs.search.brave.com/n-1C4LpN261yqZDQuW-M10i1TwGcJqVwoON5oyqEuzI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Ym1kY29zbWV0aWMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzAzL0JNRENf/d2ViX0NSRU1BLUNC/RC0xLTEuanBn" alt="Crema CBD" class="producto-img">
             <div class="producto-info">
@@ -98,7 +115,7 @@
           </article>
 
           <!-- Producto 4 -->
-          <article class="producto-card">
+          <article class="producto-card" data-categoria="otros">
             <div class="producto-badge">Energía</div>
             <img src="https://imgs.search.brave.com/_-J17E3AR_zIlb7f8lGnq3HvSi1vKGkflkpiM5N0ka8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzAy/NTEvMzE3MS8yNTQ2/L3QvNy9hc3NldHMv/cGYtMzNiMGMzMWIt/LVRIVU1CTkFJTC1D/QVBTVUxFU18xMjAw/eC5qcGc_dj0xNjMw/MDc0OTI4" alt="Cápsulas CBD" class="producto-img">
             <div class="producto-info">
@@ -111,7 +128,7 @@
           </article>
 
           <!-- Producto 5 -->
-          <article class="producto-card">
+          <article class="producto-card" data-categoria="otros">
             <div class="producto-badge">Infusión</div>
             <img src="https://imgs.search.brave.com/OPjjMhAJ5IYHgdTCzmE-OKVeFM_cS2XDX5amDynX3dg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9ncmVl/bmJyZWFrY2JkLmVz/L2Nkbi9zaG9wL2Zp/bGVzL0FNTkVTSUFf/MS5qcGc_dj0xNzM3/MTE0OTU0JndpZHRo/PTQ4MA" alt="Infusión CBD" class="producto-img">
             <div class="producto-info">
@@ -124,7 +141,7 @@
           </article>
 
           <!-- Producto 6 -->
-          <article class="producto-card">
+          <article class="producto-card" data-categoria="aceites">
             <div class="producto-badge">Alta concentración</div>
             <img src="https://imgs.search.brave.com/0wAME6XLx2pLKkbevwlqlsK3DYVdq3P5J7M8sOaj4S4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93ZWJv/dGFuaXguY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzEy/L2FjZWl0ZS1jYmQt/MzAtd2Vib3Rhbml4/LnBuZw" alt="Aceite CBD 30%" class="producto-img">
             <div class="producto-info">
@@ -135,34 +152,117 @@
               <button class="btn-comprar">Añadir al carrito <i class="fas fa-plus"></i></button>
             </div>
           </article>
+
+
+          <!-- Producto 7 -->
+          <article class="producto-card" data-categoria="aceites">
+            <div class="producto-badge">Más vendido</div>
+            <img src="https://imgs.search.brave.com/YzDjdvkwAUEQKhdXM2-bVxUIIiFHbOTAIyh9E8cUxzc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWNvY2V1dGljcy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjIvMTAvYWNlaXRl/LWRlLWNiZC0wMS03/MjB4NDAwLmpwZw" alt="Aceite CBD" class="producto-img">
+            <div class="producto-info">
+              <h3>Aceite CBD Full Spectrum</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(128)</span>
+              </div>
+              <p class="descripcion">Extracto puro con todos los cannabinoides naturales. 10ml.</p>
+              <p class="precio">29,90€ <span class="old-price">35,90€</span></p>
+              <button class="btn-comprar">Añadir al carrito <i class="fas fa-plus"></i></button>
+            </div>
+          </article>
+
+          <!-- Producto 8 -->
+          <article class="producto-card" data-categoria="otros">
+            <div class="producto-badge">Novedad</div>
+            <img src="https://imgs.search.brave.com/OAXwES0zU54L5n6zGIJ9BvTKN1rVP42hVG1eNRAKIf0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2Vuc2l0aXZlY2Jk/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMS8wMS9Dcnlz/dGFscy0yLTEwMjR4/MTAyNC5qcGc" alt="Extracto CBD" class="producto-img">
+            <div class="producto-info">
+              <h3>Extracto 99% CBD</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(76)</span>
+              </div>
+              <p class="descripcion">Concentrado puro para uso tópico o sublingual. 1g.</p>
+              <p class="precio">24,90€</p>
+              <button class="btn-comprar">Añadir al carrito <i class="fas fa-plus"></i></button>
+            </div>
+          </article>
+
+
+          <!-- Producto 9 -->
+          <article class="producto-card" data-categoria="comestibles">
+            <div class="producto-badge">Oferta</div>
+            <img src="https://imgs.search.brave.com/x1Whec4uv_dhynApb7iAr6II7WANLy4_GFob52R5xRo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmF0dXJlY2FuLmVz/L2Nkbi9zaG9wL2Zp/bGVzL0VTLTIwMjQt/MDMtMjJUMTQzMTQz/Ljk1Ny53ZWJwP3Y9/MTczMzc2NDgxMQ" alt="Gominolas CBD" class="producto-img">
+            <div class="producto-info">
+              <h3>Gominolas Relajantes</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(215)</span>
+              </div>
+              <p class="descripcion">Deliciosas gominolas con 25mg CBD por unidad. Pack 20.</p>
+              <p class="precio">19,90€ <span class="old-price">24,90€</span></p>
+              <button class="btn-comprar">Añadir al carrito <i class="fas fa-plus"></i></button>
+            </div>
+          </article>
+
+
+                  <!-- Producto 10 -->
+          <article class="producto-card" data-categoria="aceites">
+            <div class="producto-badge">Full Spectrum</div>
+            <img src="https://imgs.search.brave.com/QqPvmkC0e61Mp5zUzP1x-RK60qGlUBEz9OjdStsNz4Y/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tYW1h/a2FuYS5jb20vY2Ru/L3Nob3AvcHJvZHVj/dHMvaHVpbGVfMzBt/bF8xMF9wYWNrLmpw/Zz92PTE2ODI0MzI0/ODEmd2lkdGg9MTQ0/NQ" alt="Aceite CBD 10%" class="producto-img">
+            <div class="producto-info">
+              <h3>Aceite CBD 10%</h3>
+              <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(95)</span></div>
+              <p class="descripcion">Perfecto para comenzar con el CBD. Suave y efectivo.</p>
+              <p class="precio">24,90€</p>
+              <button class="btn-comprar">Añadir al carrito <i class="fas fa-plus"></i></button>
+            </div>
+          </article>
+
+          <!-- Producto 11 -->
+          <article class="producto-card" data-categoria="comestibles">
+            <div class="producto-badge">Chocolate</div>
+            <img src="https://imgs.search.brave.com/ueXCs1bZEWISZPjoa_S4d2QT9T9ipPTvoUP5kA2A5ls/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFEZWszUlYtekwu/anBn" alt="Chocolate CBD" class="producto-img">
+            <div class="producto-info">
+              <h3>Chocolate 50mg CBD</h3>
+              <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(167)</span></div>
+              <p class="descripcion">Tableta de chocolate negro 70% con CBD. 20 porciones.</p>
+              <p class="precio">27,50€</p>
+              <button class="btn-comprar">Añadir al carrito <i class="fas fa-plus"></i></button>
+            </div>
+          </article>
+
+          <!-- Producto 12 -->
+          <article class="producto-card" data-categoria="cosmetica">
+            <div class="producto-badge">Serum</div>
+            <img src="https://imgs.search.brave.com/cPsIaXTWgIH--1fnlKKtj_7t7XfOyYaxTH_GLjhedHM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9kaW9s/ZW8uY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIyLzAxL3Nl/cnVtLWZhY2lhbC1j/YmQtMzAwbWcuanBn" alt="Serum CBD" class="producto-img">
+            <div class="producto-info">
+              <h3>Serum Facial CBD</h3>
+              <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><span>(63)</span></div>
+              <p class="descripcion">Antiedad con CBD y ácido hialurónico. 30ml.</p>
+              <p class="precio">34,90€</p>
+              <button class="btn-comprar">Añadir al carrito <i class="fas fa-plus"></i></button>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
-    <!-- Añadir después del section-subtitle -->
-<div class="filtros-container">
-    <div class="filtros-productos">
-      <button class="btn-filtro active" data-categoria="todos">Todos</button>
-      <button class="btn-filtro" data-categoria="aceites">Aceites</button>
-      <button class="btn-filtro" data-categoria="comestibles">Comestibles</button>
-      <button class="btn-filtro" data-categoria="cosmetica">Cosmética</button>
-      <button class="btn-filtro" data-categoria="otros">Otros</button>
+    <div class="paginacion">
+      <button class="pagina-btn prev" disabled>Anterior</button>
+      <div class="paginas-container"></div>
+      <button class="pagina-btn next">Siguiente</button>
     </div>
-    <div class="ordenar-productos">
-      <select id="ordenar" aria-label="Ordenar productos">
-        <option value="popularidad">Más populares</option>
-        <option value="precio-asc">Precio: menor a mayor</option>
-        <option value="precio-desc">Precio: mayor a menor</option>
-        <option value="valoracion">Mejor valorados</option>
-      </select>
-    </div>
-  </div>
-  <div class="paginacion">
-    <button class="pagina-btn" disabled>Anterior</button>
-    <button class="pagina-btn active">1</button>
-    <button class="pagina-btn">2</button>
-    <button class="pagina-btn">3</button>
-    <button class="pagina-btn">Siguiente</button>
-  </div>
   
   </main>
 
