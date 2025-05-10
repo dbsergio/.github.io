@@ -1115,3 +1115,19 @@ a:hover, button:hover {
   content: "€";
   margin-right: 2px;
 }
+/* Estilos para el botón Ver Todos */
+.ver-todos-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.ver-todos {
+  background-color: var(--accent-color);
+  padding: 15px 40px;
+  font-size: 1.1rem;
+}
+
+.ver-todos:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
