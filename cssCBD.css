@@ -519,6 +519,7 @@
   }
   
   .form-group {
+    position: relative;
     margin-bottom: 1.5rem;
   }
   
@@ -995,7 +996,9 @@ input:valid, textarea:valid, select:valid {
 .error-message {
   color: var(--error-color);
   font-size: 0.8rem;
-  margin-top: 5px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
   display: none;
 }
 
